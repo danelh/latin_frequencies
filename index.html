@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+
+<h1>Latin Words Frequencies</h1>
+
+<form action="/action_page.php">
+  <p><label for="enter_text">Enter text here:</label></p>
+  <textarea id="total_text_box" name="total_text_box" rows="8" cols="80">
+Arma virumque canō, Trōiae quī prīmus ab ōrīs
+Ītaliam, fātō profugus, Lāvīniaque vēnit
+lītora, multum ille et terrīs iactātus et altō
+vī superum saevae memorem Iūnōnis ob īram;
+multa quoque et bellō passus, dum conderet urbem,               5
+inferretque deōs Latiō, genus unde Latīnum,
+Albānīque patrēs, atque altae moenia Rōmae.
+
+Mūsa, mihī causās memorā, quō nūmine laesō,
+quidve dolēns, rēgīna deum tot volvere cāsūs
+īnsīgnem pietāte virum, tot adīre labōrēs                                   10
+impulerit. Tantaene animīs caelestibus īrae?
+
+Urbs antīqua fuit, Tyriī tenuēre colōnī,
+Karthāgō, Ītaliam contrā Tiberīnaque longē
+ōstia, dīves opum studiīsque asperrima bellī,
+quam Iūnō fertur terrīs magis omnibus ūnam                           15
+posthabitā coluisse Samō; hīc illius arma,
+hīc currus fuit; hōc rēgnum dea gentibus esse,
+sī quā Fāta sinant, iam tum tenditque fovetque.
+Prōgeniem sed enim Trōiānō ā sanguine dūcī
+audierat, Tyriās olim quae verteret arcēs;                                   20
+hinc populum lātē regem bellōque superbum
+ventūrum excidiō Libyae: sīc volvere Parcās.
+Id metuēns, veterisque memor Sāturnia bellī,
+prīma quod ad Trōiam prō cārīs gesserat Argīs—
+necdum etiam causae īrārum saevīque dolōrēs                          25
+exciderant animō: manet altā mente repostum
+iūdicium Paridis sprētaeque iniūria fōrmae,
+et genus invīsum, et raptī Ganymēdis honōrēs.
+Hīs accēnsa super, iactātōs aequore tōtō
+Trōas, rēliquiās Danaum atque immītis Achillī,                          30
+arcēbat longē Latiō, multōsque per annōs
+errābant, āctī Fātīs, maria omnia circum.
+Tantae mōlis erat Rōmānam condere gentem!
+
+Vix e conspectu Siculae telluris in altum
+vela dabant laeti, et spumas salis aere ruebant,                          35
+cum Iuno, aeternum servans sub pectore volnus,
+haec secum: 'Mene incepto desistere victam,
+nec posse Italia Teucrorum avertere regem?
+Quippe vetor fatis. Pallasne exurere classem
+Argivom atque ipsos potuit submergere ponto,               40
+unius ob noxam et furias Aiacis Oilei?
+Ipsa, Iovis rapidum iaculata e nubibus ignem,
+disiecitque rates evertitque aequora ventis,
+illum expirantem transfixo pectore flammas
+turbine corripuit scopuloque infixit acuto.               45
+Ast ego, quae divom incedo regina, Iovisque
+et soror et coniunx, una cum gente tot annos
+bella gero! Et quisquam numen Iunonis adoret
+praeterea, aut supplex aris imponet honorem?'
+
+Talia flammato secum dea corde volutans               50
+nimborum in patriam, loca feta furentibus austris,
+Aeoliam venit. Hic vasto rex Aeolus antro
+luctantes ventos tempestatesque sonoras
+imperio premit ac vinclis et carcere frenat.
+Illi indignantes magno cum murmure montis               55
+circum claustra fremunt; celsa sedet Aeolus arce
+sceptra tenens, mollitque animos et temperat iras.
+Ni faciat, maria ac terras caelumque profundum
+quippe ferant rapidi secum verrantque per auras.
+Sed pater omnipotens speluncis abdidit atris,               60
+hoc metuens, molemque et montis insuper altos
+imposuit, regemque dedit, qui foedere certo
+et premere et laxas sciret dare iussus habenas.
+Ad quem tum Iuno supplex his vocibus usa est:
+
+'Aeole, namque tibi divom pater atque hominum rex               65
+et mulcere dedit fluctus et tollere vento,
+gens inimica mihi Tyrrhenum navigat aequor,
+Ilium in Italiam portans victosque Penates:
+incute vim ventis submersasque obrue puppes,
+aut age diversos et disiice corpora ponto.               70
+Sunt mihi bis septem praestanti corpore nymphae,
+quarum quae forma pulcherrima Deiopea,
+conubio iungam stabili propriamque dicabo,
+omnis ut tecum meritis pro talibus annos
+exigat, et pulchra faciat te prole parentem.'               75
+
+Aeolus haec contra: 'Tuus, O regina, quid optes
+explorare labor; mihi iussa capessere fas est.
+Tu mihi, quodcumque hoc regni, tu sceptra Iovemque
+concilias, tu das epulis accumbere divom,
+nimborumque facis tempestatumque potentem.'               80
+
+Haec ubi dicta, cavum conversa cuspide montem
+impulit in latus: ac venti, velut agmine facto,
+qua data porta, ruunt et terras turbine perflant.
+Incubuere mari, totumque a sedibus imis
+una Eurusque Notusque ruunt creberque procellis               85
+Africus, et vastos volvunt ad litora fluctus.
+Insequitur clamorque virum stridorque rudentum.
+Eripiunt subito nubes caelumque diemque
+Teucrorum ex oculis; ponto nox incubat atra.
+Intonuere poli, et crebris micat ignibus aether,               90
+praesentemque viris intentant omnia mortem.</textarea>
+  <br>
+   <button type="button" id="get_freqs_button" onclick=get_freqs() disabled = true>Generate </button>
+</form>
+
+<p><label for="clean_results_box">Lemmas sorted by frequencies:</label></p>
+<textarea id="clean_results_box" name="clear_result_box" rows="8" cols="80">
+</textarea>
+  <br>
+
+<p><label for="detailed_results_box">Lemmas with frequencies:</label></p>
+<textarea id="detailed_results_box" name="detailed_result_box" rows="4" cols="80">
+</textarea>
+  <br>
+  
+<script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+
+<script>
+	var lemmas;
+	var compact_loader = $.getJSON({'url': "https://raw.githubusercontent.com/danelh/latin_frequencies/main/lemmas.json", 'async': true});	 
+	compact_loader.done(function(){
+		lemmas = compact_loader.responseJSON;
+		init();}
+	);
+	
+	function init() {
+		document.getElementById("get_freqs_button").disabled = false;
+	}
+	
+	function get_freqs(){
+		var clean_words = get_clean_words();
+		var lemmatized_words = lemmatize(clean_words);
+		sorted_freq = get_sorted_freq(lemmatized_words);
+		display_freqs(sorted_freq);
+	}
+	
+	function get_words_from_input(){
+		words_string = document.getElementById("total_text_box").value;
+		return words_string;
+	}
+	
+	function get_clean_words(){
+		var raw_text = get_words_from_input();
+		var clean_words = []
+		//it removes also space. and regadless dangerous. raw_text = raw_text.replace(/\W/g, '');
+		raw_words = raw_text.split(/[ ,;\n.-]+/);
+		
+		for (let i = 0; i < raw_words.length; i++) {
+			current_raw_word = raw_words[i];
+			clean_word = remove_macrons(current_raw_word);
+			clean_word = clean_word.replace(/\W/g, '');
+			clean_word = clean_word.toLowerCase();
+			clean_word = clean_word.replace('j', 'i');
+			clean_word = clean_word.replace('v', 'u');
+			if (!isNumeric(clean_word) && clean_word != ""){
+				clean_words.push(clean_word);
+			}
+		}
+		
+		return clean_words;
+
+	}
+	
+	function isNumeric(str) {
+		if (typeof str != "string") return false // we only process strings!  
+			return !isNaN(str) && // use type coercion to parse the _entirety_ of the string (`parseFloat` alone does not do this)...
+         !isNaN(parseFloat(str)) // ...and ensure strings of whitespace fail
+	}
+	
+	function remove_macrons(s){
+		return s.normalize("NFD").replace(/[\u0300-\u036f]/g, "")	
+	}
+	
+	function lemmatize(words){
+		var lemmatized_words = []
+		for (let i = 0; i < words.length; i++) {
+			current_word = words[i] 
+			if (current_word in lemmas){
+				lemmatized_words.push(lemmas[current_word]);
+			}else{
+				lemmatized_words.push(current_word);
+			}
+		}
+		
+		return lemmatized_words
+	}
+	
+	// returns sorted list of tuples. 
+	function get_sorted_freq(words){
+		var freq_dict = {};
+		for (let i = 0; i < words.length; i++) {
+			current_word = words[i];
+			if (current_word in freq_dict){
+				freq_dict[current_word] += 1;
+			}else{
+				freq_dict[current_word] = 1;
+			}
+		}
+		
+		items = sort_counter_dict(freq_dict);
+		
+		return items;
+	}
+
+	function sort_counter_dict(cd){
+		var items = Object.keys(cd).map(function(key) {
+		return [key, cd[key]];
+		});
+
+		// Sort the array based on the second element
+		items.sort(function(first, second) {
+			return second[1] - first[1];
+		});
+		
+		return items;
+	}
+	
+	function display_freqs(sf){
+		short_values = []
+		long_values = []
+		
+		for (let i = 0; i < sf.length; i++) {
+			current_lemma = sf[i][0]
+			current_freq = sf[i][1]
+			short_values.push(current_lemma);
+			long_values.push(current_lemma.concat( " (", current_freq, ")"));
+		}
+		
+		
+		short_text = short_values.join(", ");
+		long_text = long_values.join(", ");
+		document.getElementById("clean_results_box").innerHTML = short_text
+		document.getElementById("detailed_results_box").innerHTML = long_text
+	}
+	
+		
+
+	
+  </script>
+
+</body>
+</html>
